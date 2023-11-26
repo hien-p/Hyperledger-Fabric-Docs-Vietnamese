@@ -4,22 +4,39 @@ Nói chung, blockchain là cơ sở dữ liệu phân tán, rất khó để s�
 
 Ứng dụng đầu tiên và cũng là ứng dụng nổi tiếng nhất của blockchain là Bitcoin. Kế đến là Ethereum, một nền tảng blockchain với cách tiếp cận khác, nhiều đặc điểm giống như Bitcoin nhưng thêm các hợp đồng thông minh để tạo ra một nền tảng phát triển cho các ứng dụng phân tán. Bitcoin và Ethereum nói ở trên thuộc loại nền tảng blockchain công khai (public blockchain hay permissionless blockchain). Về cơ bản, đây là các mạng công khai, bất kỳ ai, cũng có thể tham gia, nơi những người tham gia tương tác là tương đối ẩn danh.
 
-Với sự thành công ban đầu của Bitcoin, Ethereum và các nền tảng blockchain công khai khác. Nền tảng blockchain nhận được sự quan tâm rất lớn từ cộng đồng và các doanh nghiệp, từ đó các nhu cầu áp dụng blockchain vào các hoạt động doang nghiệp ngày càng tăng cao. Tuy nhiên, các nền tảng blockchain công khai chưa đáp ứng được nhu cầu của doanh nghiệp trong xử lý các vấn đề kinh doanh (tốc độ giao dịch chậm, dữ liệu hoàn toàn công khai, vấn để ẩn danh...).
+Với sự thành công ban đầu của Bitcoin, Ethereum và các nền tảng blockchain công khai khác. Nền tảng blockchain nhận được sự quan tâm rất lớn từ cộng đồng và các doanh nghiệp, từ đó các nhu cầu áp dụng blockchain vào các hoạt động doang nghiệp ngày càng tăng cao. 
+
+
+# Blockchain công khai và blockchain riêng tư
+
+Trong một blockchain công khai, ai cũng có thể tham gia vào mạng và tương đối ẩn danh. Các nút không cần tin tưởng lẫn nhau, họ chỉ cần tin tưởng vào dữ liệu trên blockchain là xác thực và cực kỳ khó để các thay đổi gian lận không bị phát giác. Dữ liệu đưa vào blockchain được xác thực thông qua các thuật toán đồng thuận dựa trên đồng tiền mã hóa.
+
+Mặt khác, các blockchain riêng tư, các bên tham gia vào mạng được định danh và xác thực. Một blockchain riêng tư cung cấp một cách để bảo đảm các tương tác giữa một nhóm các thực thể có một mục tiêu chung nhưng có thể không hoàn toàn tin tưởng lẫn nhau. Bằng cách dựa vào danh tính của những người tham gia, một blockchain riêng tư có thể sử dụng các giao thức đồng thuận truyền thống như (CFT) hoặc byzantine fault tolerant (BFT) mà không yêu cần phải tiêu tốn quá nhiều tài nguyên.
+
+Trong bối cảnh như vậy, nguy cơ người tham gia mạng blockchain riêng tư cố tình thực thi mã độc thông qua hợp đồng thông minh sẽ giảm bớt. Đầu tiên, những người tham gia biết nhau và tất cả các hành động, cho dù gửi giao dịch ứng dụng, sửa đổi cấu hình của mạng hoặc triển khai hợp đồng thông minh đều được ghi lại trên blockchain theo chính sách chứng thực được thiết lập cho mạng và loại giao dịch có liên quan. Thay vì hoàn toàn ẩn danh, bên có gây thiệt hại có thể dễ dàng được xác định và vụ việc được xử lý theo các điều khoản của mô hình quản trị.
+## Các vấn đề mà các mạng blockchain đang gặp phải
+Mặc dù lợi ích mà Blockchain mang lại rất nhiều. Song song với đó vẫn còn những hạn chế:
+* Hệ thống phức tạp: Để thiết lập mạng blockchain cần tốn nhiều công sức và đội ngũ. Bởi vì công nghệ này khó tiếp cận. Ngoài ra mỗi mạng của blockchain còn có các các quy định riêng khó đặt ra một quy tình chuẩn 
+* Kích thước mạng lưới: Một mạng blockchain đòi hỏi lượng lớn node tham gia. Việc này vô tình khiến việc triển khai trở nên khó khăn do không đủ tài nguyên nội bộ và việc triển khai public có thể dẫn đến vấn đề về bảo mật 
+* Bảo mật: Nếu một mạng có quá ít node cũng ảnh hướng đến việc khi hệ thống bị tấn công có thể dễ dàng kiểm soát.
+
+
+Chính vì thế mà  các nền tảng blockchain công khai chưa đáp ứng được nhu cầu của doanh nghiệp trong xử lý các vấn đề kinh doanh (tốc độ giao dịch chậm, dữ liệu hoàn toàn công khai, vấn để ẩn danh...).
 
 Để sử dụng cho doanh nghiệp, chúng ta cần xem xét các yêu cầu sau:
 - Các bên tham gia cần phải được định danh rõ ràng.
 -  Việc tham gia vào mạng cần được cấp phép
--  Thông lượng giao dịch cao
 -  Độ trễ giao dịch thấp
--  Quyền riêng tư và bảo mật của các giao dịch và dữ liệu liên quan đến các giao dịch kinh doanh.
+-  Quyền riêng tư và bảo mật của các giao dịch.
 
 Trong khi nhiều nền tảng blockchain hiện đang được điều chỉnh để phù hợp sử dụng cho doanh nghiệp, Hyperledger Fabric được thiết kế từ ban đầu nhằm sử dụng cho các doanh nghiệp. Các phần sau đây sẽ phân biệt Hyperledger Fabric (Fabric) với các nền tảng blockchain khác và nói sơ qua về cách thiết kế kiến trúc.
+
 
 ## Hyperledger Fabric
 
 Hyperledger Fabric là một nền tảng private blockchain mở nguồn mở, được thiết kế để sử dụng cho các hoạt động doanh nghiệp, nó cung cấp một số tính năng khác biệt so với các nền tảng blockchain phổ biến khác.
 
-Nói qua về Hyperledger, nó được thành lập bởi Linux Foundation, nơi có lịch sử lâu dài và rất thành công trong việc phát triển các dự án nguồn mở. Hyperledger Fabric là một dự án trong hệ sinh thái Hyperledger bởi một nhóm các nhà bảo trì đa dạng từ nhiều tổ chức và cộng đồng.
+Đây là một trong dự án Linux Foundation, có lịch sử  có lịch sử lâu dài và rất thành công trong việc phát triển các dự án nguồn mở. Hyperledger Fabric là một dự án trong hệ sinh thái Hyperledger bởi một nhóm các nhà bảo trì đa dạng từ nhiều tổ chức và cộng đồng.
 
 Fabric có kiến ​​trúc mô đun và tùy chỉnh cao, cho phép đổi mới, linh hoạt và tối ưu hóa với nhiều dịch vụ như ngân hàng, tài chính, bảo hiểm, y tế, nguồn nhân lực, chuỗi cung ứng và thậm chí cả âm nhạc kỹ thuật số. 
 
@@ -40,7 +57,6 @@ Hãy cùng khám phá những tính năng khác biệt này một cách chi ti�
 Hyperledger Fabric được thiết kế theo một kiến ​​trúc dạng mô-đun. Cho dù đó là cơ chế đồng thuận hay các giao thức quản lý danh tính đều có thể tùy biến (pluggable) được như LDAP hoặc OpenID Connect.
 
 Ở mức độ trửu tượng cao, Fabric bao gồm các mô-đun sau:
-
 -   Một _ordering service_  thiết lập sự đồng thuận về thứ tự của các giao dịch và sau đó phát tán (broadcast) các block lên mạng cho các peer.
 -   Một _membership service provider_ chịu trách nhiệm liên kết các thực thể trong mạng thông qua danh tính sử dụng mật mã.
 -   Một tùy chọn _peer-to-peer gossip service_  để xác định cách truyền thông tin giữa các nút trong mạng.
@@ -51,13 +67,6 @@ Hyperledger Fabric được thiết kế theo một kiến ​​trúc dạng m�
 
 Một phương thuốc không thể trị được bách bệnh. Hyperledger Fabric có thể được cấu hình theo nhiều cách để đáp ứng các yêu cầu khác cho nhiều trường hợp sử dụng.
 
-## Blockchain công khai và blockchain riêng tư
-
-Trong một blockchain công khai, ai cũng có thể tham gia vào mạng và tương đối ẩn danh. Các nút không cần tin tưởng lẫn nhau, họ chỉ cần tin tưởng vào dữ liệu trên blockchain là xác thực và cực kỳ khó để các thay đổi gian lận không bị phát giác. Dữ liệu đưa vào blockchain được xác thực thông qua các thuật toán đồng thuận dựa trên đồng tiền mã hóa.
-
-Mặt khác, các blockchain riêng tư, các bên tham gia vào mạng được định danh và xác thực. Một blockchain riêng tư cung cấp một cách để bảo đảm các tương tác giữa một nhóm các thực thể có một mục tiêu chung nhưng có thể không hoàn toàn tin tưởng lẫn nhau. Bằng cách dựa vào danh tính của những người tham gia, một blockchain riêng tư có thể sử dụng các giao thức đồng thuận truyền thống như (CFT) hoặc byzantine fault tolerant (BFT) mà không yêu cần phải tiêu tốn quá nhiều tài nguyên.
-
-Trong bối cảnh như vậy, nguy cơ người tham gia mạng blockchain riêng tư cố tình thực thi mã độc thông qua hợp đồng thông minh sẽ giảm bớt. Đầu tiên, những người tham gia biết nhau và tất cả các hành động, cho dù gửi giao dịch ứng dụng, sửa đổi cấu hình của mạng hoặc triển khai hợp đồng thông minh đều được ghi lại trên blockchain theo chính sách chứng thực được thiết lập cho mạng và loại giao dịch có liên quan. Thay vì hoàn toàn ẩn danh, bên có gây thiệt hại có thể dễ dàng được xác định và vụ việc được xử lý theo các điều khoản của mô hình quản trị.
 
 ## Hợp đồng thông minh
 

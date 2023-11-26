@@ -7,7 +7,7 @@
 - [Định danh](./5-indentity.md)
 - [Membership](./6-membership.md)
 - [Peers](./7-peers.md)
-- [Chaincode](./8-chaincode.md)
+- [Chaincode](Smart%20contract%20and%20chaincode.md)
 - [Sổ cái](./9-ledger.md)
 - [Ordering service](./10-ordering-service.md)
 - [Dữ liệu riêng tư](./11-private-data.md)
